@@ -1,0 +1,1722 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MAISON ROUGE — L'art de se préparer.</title>
+  <meta name="description" content="MAISON ROUGE — フランス・オートクチュール系の架空メゾン・ド・ボーテ。フェイシャル、ボディ、結婚式準備までを一つの儀式として整える完全予約制のメゾン。" />
+  <meta name="theme-color" content="#6b1f2a" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500;1,600&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Noto+Serif+JP:wght@400;500;600&family=Klee+One:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :where(html, body) {
+      line-break: strict;
+      word-break: normal;
+      overflow-wrap: break-word;
+      hanging-punctuation: allow-end;
+    }
+    :where(h1, h2, h3, h4, p, li, dt, dd, figcaption, blockquote, a, span, small, strong, em) {
+      line-break: strict;
+      word-break: auto-phrase;
+      overflow-wrap: break-word;
+    }
+    :where(h1, h2, h3, h4, [class*="display"], [class*="brand"], [class*="eyebrow"], [class*="title"]) {
+      text-wrap: balance;
+    }
+    :where(p, li, dd, figcaption, blockquote) {
+      text-wrap: pretty;
+    }
+
+    :root {
+      /* Palette — French velvet maison */
+      --cream:     #f1eadd;
+      --cream-2:   #ebe2cf;
+      --cream-3:   #e4d7bf;
+      --velvet:    #6b1f2a;
+      --velvet-d:  #5a1a23;
+      --velvet-l:  #7a2632;
+      --champagne: #d4c5a9;
+      --gold-old:  #9d7e3c;
+      --gold-soft: #c2a766;
+      --ink:       #2a1f1d;
+      --ink-mute:  #6e5e58;
+      --line:      #c8b89c;
+      --line-soft: #d8cab0;
+
+      /* Typography */
+      --font-display:    'Playfair Display', 'Cormorant Garamond', 'Noto Serif JP', serif;
+      --font-display-it: 'Playfair Display', serif;
+      --font-sub:        'Cormorant Garamond', 'Noto Serif JP', serif;
+      --font-serif-jp:   'Noto Serif JP', serif;
+      --font-hand:       'Klee One', 'Noto Serif JP', serif;
+      --font-body:       'Cormorant Garamond', 'Noto Serif JP', serif;
+      --font-meta:       'Cormorant Garamond', 'Noto Serif JP', serif;
+
+      /* Scale */
+      --fs-hero:   clamp(56px, 9vw, 144px);
+      --fs-h2:     clamp(32px, 4vw, 64px);
+      --fs-h3:     clamp(22px, 2.2vw, 32px);
+      --fs-body:   17px;
+      --fs-cap:    13px;
+      --lh-body:   1.9;
+      --lh-disp:   1.05;
+      --tracking-display: 0.01em;
+      --tracking-eyebrow: 0.32em;
+      --tracking-body:    0.04em;
+
+      /* Layout */
+      --max:    1180px;
+      --pad-x:  clamp(24px, 5vw, 80px);
+      --gap:    clamp(64px, 10vh, 160px);
+
+      /* Motion */
+      --ease:   cubic-bezier(.22,.61,.36,1);
+      --dur:    .8s;
+
+      /* Velvet texture — 布の質感を CSS で */
+      --noise-cream: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.15  0 0 0 0 0.12  0 0 0 0 0.10  0 0 0 0.06 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+      --noise-velvet: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='280' height='280'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='1.1' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.94  0 0 0 0 0.88  0 0 0 0 0.78  0 0 0 0.08 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+      --velvet-fold: linear-gradient(180deg, var(--velvet-d) 0%, var(--velvet) 45%, var(--velvet-d) 100%);
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    body {
+      background: var(--cream);
+      background-image: var(--noise-cream);
+      background-blend-mode: multiply;
+      color: var(--ink);
+      font-family: var(--font-body);
+      font-weight: 400;
+      font-size: var(--fs-body);
+      line-height: var(--lh-body);
+      letter-spacing: var(--tracking-body);
+      overflow-x: hidden;
+    }
+    @supports not (background-blend-mode: multiply) {
+      body { background: var(--cream); }
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+    button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+
+    :focus-visible {
+      outline: 2px solid var(--gold-old);
+      outline-offset: 4px;
+    }
+
+    [id] { scroll-margin-top: 96px; }
+
+    .num, time, .tabular {
+      font-variant-numeric: tabular-nums;
+    }
+
+    .nowrap { white-space: nowrap; }
+
+    /* ---------- Nav ---------- */
+    nav.top {
+      position: fixed; inset: 0 0 auto;
+      z-index: 50;
+      display: flex; justify-content: space-between; align-items: center;
+      min-height: 76px;
+      padding: 1rem clamp(20px, 4vw, 64px);
+      background: rgba(241, 234, 221, 0);
+      border-bottom: 1px solid transparent;
+      transition: background .6s var(--ease), border-color .6s var(--ease), backdrop-filter .6s var(--ease);
+    }
+    nav.top.is-scrolled {
+      background: rgba(241, 234, 221, .88);
+      backdrop-filter: saturate(140%) blur(12px);
+      -webkit-backdrop-filter: saturate(140%) blur(12px);
+      border-bottom-color: var(--line-soft);
+    }
+    .brand {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-weight: 500;
+      font-size: 1.15rem;
+      letter-spacing: .28em;
+      padding-left: .28em;
+      color: var(--velvet);
+      white-space: nowrap;
+    }
+    .brand small {
+      display: block;
+      font-family: var(--font-meta);
+      font-style: normal;
+      font-size: 9px;
+      letter-spacing: .42em;
+      color: var(--ink-mute);
+      margin-top: 2px;
+      padding-left: .1em;
+    }
+    .nav-links {
+      display: flex; gap: clamp(1.1rem, 2.4vw, 2.4rem);
+      font-family: var(--font-meta);
+      font-size: 11px;
+      letter-spacing: .28em;
+      text-transform: uppercase;
+      color: var(--ink-mute);
+    }
+    .nav-link {
+      position: relative;
+      padding-bottom: 6px;
+      transition: color .5s var(--ease);
+    }
+    .nav-link::after {
+      content: "";
+      position: absolute; left: 0; bottom: 0;
+      height: 1px;
+      background: var(--gold-old);
+      width: 0;
+      transition: width var(--dur) var(--ease);
+    }
+    .nav-link:hover { color: var(--velvet); }
+    .nav-link:hover::after { width: 100%; }
+    .nav-cta {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: 13px;
+      letter-spacing: .14em;
+      color: var(--velvet);
+      white-space: nowrap;
+      border-bottom: 0.5px solid var(--gold-old);
+      padding-bottom: 2px;
+    }
+    .nav-toggle { display: none; }
+
+    /* ---------- Hero ---------- */
+    .hero {
+      position: relative;
+      min-height: 100svh;
+      padding: 0 var(--pad-x);
+      display: grid;
+      grid-template-rows: 1fr auto;
+      overflow: hidden;
+    }
+    .hero-grid {
+      position: relative;
+      max-width: var(--max);
+      width: 100%;
+      margin: 0 auto;
+      padding-top: clamp(120px, 20vh, 200px);
+      padding-bottom: clamp(2rem, 6vh, 4rem);
+      display: grid;
+      grid-template-columns: 1.15fr 1fr;
+      gap: clamp(2rem, 6vw, 5rem);
+      align-items: end;
+    }
+    .hero-text {
+      padding-bottom: 1rem;
+    }
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: .9rem;
+      font-family: var(--font-meta);
+      font-size: 11px;
+      letter-spacing: var(--tracking-eyebrow);
+      text-transform: uppercase;
+      color: var(--gold-old);
+      margin-bottom: clamp(1.6rem, 4vw, 2.6rem);
+    }
+    .hero-eyebrow::before {
+      content: "";
+      width: 36px; height: 0.5px;
+      background: var(--gold-old);
+    }
+    .hero h1 {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-weight: 400;
+      font-size: var(--fs-hero);
+      line-height: var(--lh-disp);
+      letter-spacing: var(--tracking-display);
+      color: var(--velvet);
+      max-width: 11ch;
+    }
+    .hero h1 .roman {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 0.7em;
+      letter-spacing: .08em;
+      display: block;
+      color: var(--ink);
+      margin-top: .2em;
+    }
+    .hero-jp {
+      font-family: var(--font-serif-jp);
+      font-weight: 500;
+      color: var(--ink);
+      margin-top: clamp(1.6rem, 3vw, 2.4rem);
+      max-width: 32ch;
+      font-size: clamp(13px, 1.05vw, 15px);
+      line-height: 2.05;
+      letter-spacing: .06em;
+    }
+    .hero-figure {
+      position: relative;
+      aspect-ratio: 3 / 4;
+      overflow: hidden;
+      border-radius: 0;
+      box-shadow: 0 20px 60px -30px rgba(42, 31, 29, .35);
+    }
+    .hero-figure::before {
+      content: "";
+      position: absolute; inset: 0;
+      background: linear-gradient(180deg, rgba(107,31,42,.05) 0%, rgba(42,31,29,.18) 100%);
+      z-index: 2;
+      pointer-events: none;
+    }
+    .hero-figure img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      filter: saturate(.78) brightness(.92) contrast(1.04);
+    }
+    .hero-figure figcaption {
+      position: absolute;
+      left: 1.2rem; bottom: 1.2rem;
+      z-index: 3;
+      font-family: var(--font-hand);
+      font-size: 12px;
+      letter-spacing: .08em;
+      color: var(--cream);
+      text-shadow: 0 1px 4px rgba(0,0,0,.35);
+      max-width: 22ch;
+    }
+    .hero-foot {
+      max-width: var(--max);
+      width: 100%;
+      margin: 0 auto;
+      display: flex; justify-content: space-between; align-items: end;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      padding-top: clamp(2rem, 5vh, 3.5rem);
+      padding-bottom: clamp(1.2rem, 3vh, 2rem);
+      border-top: 0.5px solid var(--line);
+    }
+    .hero-foot dl {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: clamp(1.4rem, 3vw, 3rem);
+      flex: 1 1 auto;
+      max-width: 640px;
+    }
+    .hero-foot dt {
+      font-family: var(--font-meta);
+      font-size: 10px;
+      letter-spacing: .26em;
+      text-transform: uppercase;
+      color: var(--ink-mute);
+      margin-bottom: .4rem;
+    }
+    .hero-foot dd {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: clamp(1rem, 1.3vw, 1.2rem);
+      letter-spacing: .02em;
+      color: var(--ink);
+    }
+    .hero-foot dd.jp {
+      font-family: var(--font-serif-jp);
+      font-style: normal;
+      font-weight: 500;
+      font-size: clamp(13px, 1vw, 14px);
+      letter-spacing: .08em;
+    }
+    .hero-mark {
+      font-family: var(--font-meta);
+      font-size: 10px;
+      letter-spacing: .26em;
+      text-transform: uppercase;
+      color: var(--ink-mute);
+      display: inline-flex; align-items: center; gap: .55rem;
+      white-space: nowrap;
+    }
+    .hero-mark .dot { width: 5px; height: 5px; background: var(--velvet); border-radius: 50%; }
+
+    /* ---------- Section primitives ---------- */
+    section { padding: var(--gap) var(--pad-x); }
+    .container { max-width: var(--max); margin: 0 auto; }
+
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: .85rem;
+      font-family: var(--font-meta);
+      font-size: 11px;
+      letter-spacing: var(--tracking-eyebrow);
+      text-transform: uppercase;
+      color: var(--gold-old);
+      white-space: nowrap;
+    }
+    .eyebrow::before {
+      content: "";
+      width: 26px; height: 0.5px;
+      background: var(--gold-old);
+    }
+    .section-head {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(2rem, 6vw, 5rem);
+      align-items: end;
+      margin-bottom: clamp(2.8rem, 6vw, 5rem);
+    }
+    .display-h {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-weight: 400;
+      font-size: var(--fs-h2);
+      letter-spacing: var(--tracking-display);
+      line-height: 1.08;
+      color: var(--velvet);
+      margin-top: 1.4rem;
+    }
+    .display-h .roman {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 0.62em;
+      letter-spacing: .1em;
+      display: block;
+      color: var(--ink);
+      margin-top: .35em;
+    }
+    .lede {
+      font-family: var(--font-serif-jp);
+      font-weight: 400;
+      color: var(--ink);
+      font-size: 15px;
+      line-height: 2.1;
+      letter-spacing: .06em;
+      max-width: 38ch;
+      justify-self: end;
+    }
+
+    /* ---------- Velvet section base ---------- */
+    .section--velvet {
+      position: relative;
+      background: var(--velvet-fold);
+      color: var(--cream);
+      isolation: isolate;
+    }
+    .section--velvet::before {
+      content: "";
+      position: absolute; inset: 0;
+      background-image: var(--noise-velvet);
+      mix-blend-mode: overlay;
+      opacity: .55;
+      pointer-events: none;
+      z-index: 0;
+    }
+    @supports not (mix-blend-mode: overlay) {
+      .section--velvet::before { opacity: .22; mix-blend-mode: normal; }
+    }
+    .section--velvet > * { position: relative; z-index: 1; }
+    .section--velvet .eyebrow { color: var(--champagne); }
+    .section--velvet .eyebrow::before { background: var(--champagne); }
+    .section--velvet .display-h { color: var(--cream); }
+    .section--velvet .display-h .roman { color: var(--champagne); }
+    .section--velvet .lede { color: var(--cream); opacity: .88; }
+
+    /* ---------- Philosophy ---------- */
+    .philosophy {
+      padding-top: clamp(96px, 14vh, 200px);
+      padding-bottom: clamp(64px, 10vh, 140px);
+    }
+    .philosophy-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: clamp(2rem, 6vw, 5rem);
+      align-items: start;
+    }
+    .philosophy-mark {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-weight: 400;
+      font-size: clamp(28px, 3vw, 44px);
+      line-height: 1.3;
+      color: var(--velvet);
+      letter-spacing: .01em;
+    }
+    .philosophy-mark::after {
+      content: "";
+      display: block;
+      width: 56px; height: 0.5px;
+      background: var(--gold-old);
+      margin-top: 1.8rem;
+    }
+    .philosophy-body {
+      font-family: var(--font-serif-jp);
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 2.15;
+      letter-spacing: .055em;
+      color: var(--ink);
+      max-width: 52ch;
+    }
+    .philosophy-body p + p { margin-top: 1.6rem; }
+    .philosophy-body em {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-weight: 500;
+      color: var(--velvet);
+      letter-spacing: .02em;
+    }
+
+    /* ---------- Le Soin / Le Corps (services) ---------- */
+    .soins {
+      background: var(--cream-2);
+      border-top: 0.5px solid var(--line-soft);
+      border-bottom: 0.5px solid var(--line-soft);
+    }
+    .soins-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(1.6rem, 3vw, 2.4rem);
+    }
+    .soin {
+      position: relative;
+      padding: clamp(1.6rem, 3vw, 2.4rem);
+      background: var(--cream);
+      background-image: var(--noise-cream);
+      background-blend-mode: multiply;
+      border: 0.5px solid var(--line-soft);
+      transition: border-color .6s var(--ease), transform .6s var(--ease);
+    }
+    .soin:hover {
+      border-color: var(--gold-old);
+    }
+    .soin-num {
+      font-family: var(--font-meta);
+      font-style: italic;
+      font-size: 11px;
+      letter-spacing: .26em;
+      color: var(--gold-old);
+      margin-bottom: 1.2rem;
+      display: block;
+    }
+    .soin h3 {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-weight: 500;
+      font-size: clamp(22px, 2vw, 30px);
+      line-height: 1.2;
+      letter-spacing: .015em;
+      color: var(--velvet);
+      margin-bottom: .35rem;
+    }
+    .soin h3 small {
+      display: block;
+      font-family: var(--font-serif-jp);
+      font-style: normal;
+      font-weight: 500;
+      font-size: 13px;
+      letter-spacing: .14em;
+      color: var(--ink);
+      margin-top: .5rem;
+    }
+    .soin p {
+      font-family: var(--font-serif-jp);
+      font-size: 14px;
+      line-height: 2;
+      letter-spacing: .05em;
+      color: var(--ink-mute);
+      margin-top: 1.2rem;
+    }
+    .soin-meta {
+      display: flex; gap: 1.4rem;
+      margin-top: 1.4rem;
+      padding-top: 1.2rem;
+      border-top: 0.5px dashed var(--line);
+      font-family: var(--font-meta);
+      font-size: 12px;
+      letter-spacing: .12em;
+      color: var(--ink);
+    }
+    .soin-meta span { white-space: nowrap; }
+    .soin-meta span.price {
+      margin-left: auto;
+      font-style: italic;
+      color: var(--velvet);
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* Le Corps — velvet section */
+    .corps-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: clamp(1.6rem, 3vw, 2.4rem);
+    }
+    .corps {
+      position: relative;
+      padding: clamp(1.4rem, 2.4vw, 2rem) 0;
+      border-top: 0.5px solid rgba(212, 197, 169, .35);
+    }
+    .corps:first-child { border-top: 0; }
+    .corps-num {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: 13px;
+      letter-spacing: .12em;
+      color: var(--champagne);
+      margin-bottom: 1rem;
+    }
+    .corps h3 {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-weight: 500;
+      font-size: clamp(20px, 1.8vw, 26px);
+      letter-spacing: .015em;
+      color: var(--cream);
+      margin-bottom: .4rem;
+    }
+    .corps h3 small {
+      display: block;
+      font-family: var(--font-serif-jp);
+      font-style: normal;
+      font-weight: 500;
+      font-size: 12px;
+      letter-spacing: .16em;
+      color: var(--champagne);
+      margin-top: .5rem;
+    }
+    .corps p {
+      font-family: var(--font-serif-jp);
+      font-size: 13px;
+      line-height: 2;
+      letter-spacing: .05em;
+      color: var(--cream);
+      opacity: .85;
+      margin-top: 1rem;
+      max-width: 32ch;
+    }
+    .corps-meta {
+      margin-top: 1.2rem;
+      font-family: var(--font-meta);
+      font-style: italic;
+      font-size: 12px;
+      letter-spacing: .1em;
+      color: var(--champagne);
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }
+
+    /* ---------- Le Mariage (timeline) ---------- */
+    .mariage {
+      padding-top: clamp(96px, 14vh, 200px);
+      padding-bottom: clamp(96px, 14vh, 200px);
+    }
+    .mariage-intro {
+      max-width: 48ch;
+      font-family: var(--font-serif-jp);
+      font-size: 15px;
+      line-height: 2.15;
+      letter-spacing: .055em;
+      color: var(--ink);
+      margin-bottom: clamp(3rem, 7vw, 5rem);
+    }
+    .timeline {
+      position: relative;
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: clamp(2rem, 5vw, 4rem);
+      padding-top: 1rem;
+    }
+    .timeline-rail {
+      position: relative;
+      padding-top: 1rem;
+    }
+    .timeline-rail::before {
+      content: "";
+      position: absolute;
+      left: 11px; top: 0; bottom: 0;
+      width: 0.5px;
+      background: linear-gradient(180deg, var(--gold-old) 0%, var(--line) 100%);
+    }
+    .timeline-mark {
+      display: block;
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: 22px;
+      color: var(--velvet);
+      letter-spacing: .02em;
+      margin-bottom: 1rem;
+    }
+    .timeline-list {
+      display: grid;
+      gap: clamp(2.6rem, 5vw, 4rem);
+      list-style: none;
+    }
+    .stage {
+      position: relative;
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: clamp(1.2rem, 3vw, 2.4rem);
+      padding-left: 2.4rem;
+    }
+    .stage::before {
+      content: "";
+      position: absolute;
+      left: 0; top: .65rem;
+      width: 22px; height: 0.5px;
+      background: var(--gold-old);
+    }
+    .stage::after {
+      content: "";
+      position: absolute;
+      left: 18px; top: calc(.65rem - 3.5px);
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: var(--cream);
+      border: 0.5px solid var(--gold-old);
+    }
+    .stage-time {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-weight: 500;
+      font-size: clamp(22px, 2.6vw, 32px);
+      line-height: 1.1;
+      letter-spacing: .015em;
+      color: var(--velvet);
+      font-variant-numeric: tabular-nums;
+    }
+    .stage-time small {
+      display: block;
+      font-family: var(--font-serif-jp);
+      font-style: normal;
+      font-weight: 500;
+      font-size: 12px;
+      letter-spacing: .16em;
+      color: var(--ink-mute);
+      margin-top: .5rem;
+    }
+    .stage h3 {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-weight: 500;
+      font-size: clamp(18px, 1.6vw, 22px);
+      letter-spacing: .015em;
+      color: var(--ink);
+      margin-bottom: .4rem;
+    }
+    .stage h3 .jp {
+      font-family: var(--font-serif-jp);
+      font-style: normal;
+      font-weight: 500;
+      font-size: 13px;
+      letter-spacing: .14em;
+      color: var(--velvet);
+      margin-left: .8rem;
+    }
+    .stage p {
+      font-family: var(--font-serif-jp);
+      font-size: 14px;
+      line-height: 2.05;
+      letter-spacing: .05em;
+      color: var(--ink-mute);
+      max-width: 46ch;
+    }
+    .stage ul {
+      list-style: none;
+      margin-top: 1rem;
+      display: grid;
+      gap: .55rem;
+    }
+    .stage ul li {
+      position: relative;
+      padding-left: 1.2rem;
+      font-family: var(--font-serif-jp);
+      font-size: 13px;
+      letter-spacing: .06em;
+      color: var(--ink);
+    }
+    .stage ul li::before {
+      content: "—";
+      position: absolute;
+      left: 0;
+      color: var(--gold-old);
+    }
+    .stage-quote {
+      grid-column: 1 / -1;
+      margin-top: 1.2rem;
+      padding-left: 1rem;
+      border-left: 0.5px solid var(--gold-old);
+      font-family: var(--font-hand);
+      font-size: 13px;
+      letter-spacing: .04em;
+      color: var(--ink-mute);
+      max-width: 56ch;
+      line-height: 1.95;
+    }
+
+    /* ---------- La Maison (editorial) ---------- */
+    .maison {
+      background: var(--cream-2);
+      border-top: 0.5px solid var(--line-soft);
+      border-bottom: 0.5px solid var(--line-soft);
+    }
+    .maison-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(2rem, 6vw, 5rem);
+      align-items: start;
+    }
+    .maison-figure {
+      aspect-ratio: 4 / 5;
+      overflow: hidden;
+      position: relative;
+    }
+    .maison-figure::after {
+      content: "";
+      position: absolute; inset: 0;
+      background: linear-gradient(180deg, rgba(107,31,42,.04), rgba(42,31,29,.14));
+      pointer-events: none;
+    }
+    .maison-figure img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      filter: saturate(.8) contrast(1.02) brightness(.94);
+    }
+    .maison-figure figcaption {
+      position: absolute;
+      left: 1.2rem; bottom: 1.2rem;
+      z-index: 2;
+      font-family: var(--font-hand);
+      font-size: 12px;
+      letter-spacing: .08em;
+      color: var(--cream);
+      text-shadow: 0 1px 4px rgba(0,0,0,.35);
+      max-width: 22ch;
+    }
+    .maison-text {
+      padding-top: 1rem;
+    }
+    .maison-lede {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: clamp(22px, 2.2vw, 32px);
+      line-height: 1.4;
+      letter-spacing: .015em;
+      color: var(--velvet);
+      margin-bottom: 1.6rem;
+      max-width: 22ch;
+    }
+    .maison-body {
+      font-family: var(--font-serif-jp);
+      font-size: 15px;
+      line-height: 2.1;
+      letter-spacing: .055em;
+      color: var(--ink);
+      max-width: 42ch;
+    }
+    .maison-body p + p { margin-top: 1.4rem; }
+    .materials {
+      margin-top: 2.4rem;
+      padding-top: 1.8rem;
+      border-top: 0.5px dashed var(--line);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.4rem 2rem;
+    }
+    .material {
+      font-family: var(--font-meta);
+      font-size: 12px;
+      letter-spacing: .14em;
+      color: var(--ink);
+    }
+    .material em {
+      display: block;
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: 16px;
+      letter-spacing: .02em;
+      color: var(--velvet);
+      margin-bottom: .35rem;
+    }
+
+    /* ---------- Notes ---------- */
+    .notes {
+      padding-top: clamp(80px, 12vh, 160px);
+      padding-bottom: clamp(80px, 12vh, 160px);
+    }
+    .notes-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0 clamp(3rem, 6vw, 5rem);
+    }
+    .note {
+      padding: 1.6rem 0;
+      border-top: 0.5px solid var(--line);
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: clamp(1rem, 2.5vw, 2rem);
+      align-items: start;
+    }
+    .note dt {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-weight: 500;
+      font-size: 15px;
+      letter-spacing: .04em;
+      color: var(--velvet);
+      white-space: nowrap;
+    }
+    .note dt small {
+      display: block;
+      font-family: var(--font-serif-jp);
+      font-style: normal;
+      font-weight: 500;
+      font-size: 12px;
+      letter-spacing: .16em;
+      color: var(--ink-mute);
+      margin-top: .35rem;
+    }
+    .note dd {
+      font-family: var(--font-serif-jp);
+      font-size: 14px;
+      line-height: 2.05;
+      letter-spacing: .05em;
+      color: var(--ink);
+      max-width: 42ch;
+    }
+    .note dd .tabular { color: var(--velvet); }
+
+    /* ---------- Reservation ---------- */
+    .reservation {
+      padding-top: clamp(96px, 14vh, 200px);
+      padding-bottom: clamp(96px, 14vh, 200px);
+    }
+    .reservation-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(2.5rem, 6vw, 5rem);
+      align-items: end;
+    }
+    .reservation-text .display-h {
+      color: var(--cream);
+    }
+    .reservation-text p {
+      font-family: var(--font-serif-jp);
+      font-size: 15px;
+      line-height: 2.1;
+      letter-spacing: .06em;
+      color: var(--cream);
+      opacity: .88;
+      max-width: 38ch;
+      margin-top: 1.6rem;
+    }
+    .reservation-text .signature {
+      font-family: var(--font-hand);
+      font-size: 14px;
+      letter-spacing: .06em;
+      color: var(--champagne);
+      margin-top: 2.4rem;
+      max-width: 36ch;
+      line-height: 1.95;
+    }
+    .reservation-card {
+      background: var(--cream);
+      background-image: var(--noise-cream);
+      background-blend-mode: multiply;
+      color: var(--ink);
+      padding: clamp(2rem, 4vw, 3rem);
+      border: 0.5px solid var(--gold-old);
+    }
+    .reservation-card h3 {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-weight: 500;
+      font-size: clamp(20px, 1.8vw, 26px);
+      letter-spacing: .02em;
+      color: var(--velvet);
+      margin-bottom: 1.6rem;
+    }
+    .reservation-card dl {
+      display: grid;
+      gap: 1rem 1.4rem;
+      grid-template-columns: auto 1fr;
+      font-family: var(--font-serif-jp);
+      font-size: 14px;
+      letter-spacing: .05em;
+      line-height: 1.95;
+    }
+    .reservation-card dt {
+      color: var(--ink-mute);
+      font-size: 11px;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      font-family: var(--font-meta);
+      padding-top: .25rem;
+      white-space: nowrap;
+    }
+    .reservation-card dd { color: var(--ink); }
+    .reservation-card dd a {
+      color: var(--velvet);
+      border-bottom: 0.5px solid var(--gold-old);
+      padding-bottom: 1px;
+      white-space: nowrap;
+      transition: color .5s var(--ease);
+    }
+    .reservation-card dd a:hover { color: var(--velvet-l); }
+    .reservation-card .tabular { font-variant-numeric: tabular-nums; letter-spacing: .04em; }
+    .reservation-cta {
+      margin-top: 2.4rem;
+      display: inline-flex; align-items: baseline; gap: .8rem;
+      padding: .9rem 1.6rem;
+      background: var(--velvet);
+      color: var(--cream);
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: 16px;
+      letter-spacing: .08em;
+      border: 0.5px solid var(--velvet);
+      white-space: nowrap;
+      transition: background .55s var(--ease), color .55s var(--ease);
+    }
+    .reservation-cta small {
+      font-family: var(--font-meta);
+      font-style: normal;
+      font-size: 10px;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--champagne);
+    }
+    .reservation-cta:hover {
+      background: var(--cream);
+      color: var(--velvet);
+    }
+
+    /* ---------- Footer ---------- */
+    footer {
+      background: var(--velvet-d);
+      color: var(--cream);
+      padding: clamp(3.5rem, 8vh, 6rem) var(--pad-x) clamp(2rem, 4vh, 3rem);
+      position: relative;
+      isolation: isolate;
+    }
+    footer::before {
+      content: "";
+      position: absolute; inset: 0;
+      background-image: var(--noise-velvet);
+      mix-blend-mode: overlay;
+      opacity: .5;
+      pointer-events: none;
+      z-index: 0;
+    }
+    @supports not (mix-blend-mode: overlay) {
+      footer::before { opacity: .18; mix-blend-mode: normal; }
+    }
+    .footer-inner {
+      position: relative; z-index: 1;
+      max-width: var(--max);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr 1fr;
+      gap: clamp(2rem, 5vw, 4rem);
+      align-items: start;
+    }
+    .footer-brand {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-weight: 500;
+      font-size: 1.8rem;
+      letter-spacing: .12em;
+      color: var(--cream);
+      margin-bottom: 1.2rem;
+    }
+    .footer-tag {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-weight: 400;
+      font-size: 1.05rem;
+      letter-spacing: .04em;
+      color: var(--champagne);
+      white-space: nowrap;
+    }
+    .footer-block h4 {
+      font-family: var(--font-meta);
+      font-weight: 500;
+      font-size: 10px;
+      letter-spacing: .32em;
+      text-transform: uppercase;
+      color: var(--champagne);
+      margin-bottom: 1rem;
+    }
+    .footer-block p, .footer-block a {
+      font-family: var(--font-serif-jp);
+      font-weight: 400;
+      font-size: 13px;
+      letter-spacing: .06em;
+      line-height: 2;
+      color: var(--cream);
+      opacity: .82;
+      font-variant-numeric: tabular-nums;
+    }
+    .footer-block a:hover { opacity: 1; color: var(--champagne); }
+    .footer-bottom {
+      position: relative; z-index: 1;
+      max-width: var(--max);
+      margin: clamp(3rem, 6vh, 4rem) auto 0;
+      padding-top: 1.6rem;
+      border-top: 0.5px solid rgba(212, 197, 169, .25);
+      display: flex; justify-content: space-between;
+      gap: 1rem;
+      font-family: var(--font-meta);
+      font-size: 10px;
+      letter-spacing: .28em;
+      text-transform: uppercase;
+      color: var(--champagne);
+    }
+    .footer-bottom .right { font-style: italic; text-transform: none; letter-spacing: .12em; }
+
+    /* ---------- Reveal animation ---------- */
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s var(--ease), transform 1s var(--ease);
+    }
+    .reveal.is-in {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* ---------- Reduced motion ---------- */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.001s !important;
+        transition-duration: 0.001s !important;
+      }
+      .reveal { opacity: 1; transform: none; }
+      .nav-link::after { width: 100%; }
+    }
+
+    /* ---------- Mobile (≤ 840px) ---------- */
+    @media (max-width: 840px) {
+      :root {
+        --fs-body: 16px;
+      }
+      nav.top { min-height: 64px; padding: .8rem 20px; }
+      .brand { font-size: 1rem; letter-spacing: .22em; }
+      .brand small { font-size: 8px; letter-spacing: .32em; }
+      .nav-links { display: none; }
+      .nav-cta { font-size: 12px; }
+
+      .hero { padding-top: 0; }
+      .hero-grid {
+        grid-template-columns: 1fr;
+        padding-top: clamp(110px, 18vh, 160px);
+        gap: 2.4rem;
+      }
+      .hero-figure { aspect-ratio: 4 / 5; order: -1; }
+      .hero h1 { max-width: 14ch; }
+      .hero-foot { flex-direction: column; align-items: flex-start; }
+      .hero-foot dl {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        width: 100%;
+      }
+
+      .section-head {
+        grid-template-columns: 1fr;
+        gap: 1.4rem;
+      }
+      .lede { justify-self: start; max-width: 100%; }
+
+      .philosophy-grid { grid-template-columns: 1fr; gap: 2.4rem; }
+
+      .soins-list { grid-template-columns: 1fr; }
+
+      .corps-list { grid-template-columns: 1fr; }
+      .corps { padding: 1.4rem 0; border-top: 0.5px solid rgba(212, 197, 169, .35); }
+      .corps:first-child { border-top: 0; }
+
+      /* LE MARIAGE — vertical timeline */
+      .timeline {
+        grid-template-columns: 1fr;
+        gap: 1.6rem;
+      }
+      .timeline-rail { padding-top: 0; }
+      .timeline-rail::before { display: none; }
+      .timeline-mark { font-size: 18px; margin-bottom: .5rem; }
+      .stage {
+        grid-template-columns: 1fr;
+        padding-left: 1.6rem;
+        gap: .8rem;
+      }
+      .stage::before { left: 0; top: .9rem; width: 14px; }
+      .stage::after { left: 12px; top: calc(.9rem - 3.5px); }
+      .stage-time { font-size: 22px; }
+
+      .maison-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .maison-figure { aspect-ratio: 4 / 5; }
+      .materials { grid-template-columns: 1fr; }
+
+      .notes-grid { grid-template-columns: 1fr; gap: 0; }
+      .note { grid-template-columns: 110px 1fr; padding: 1.2rem 0; }
+
+      .reservation-inner { grid-template-columns: 1fr; gap: 2.4rem; }
+
+      .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
+      .footer-brand { font-size: 1.4rem; }
+      .footer-bottom { flex-direction: column; gap: .6rem; }
+    }
+
+    /* ---------- Print friendly ---------- */
+    @media print {
+      body { background: #fff; color: #000; }
+      nav.top, .reservation-cta { display: none; }
+      .section--velvet, footer { background: #fff !important; color: #000 !important; }
+      .section--velvet::before, footer::before { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="top" id="top-nav" aria-label="メインナビゲーション">
+  <a href="#" class="brand" aria-label="MAISON ROUGE トップへ">
+    MAISON ROUGE
+    <small>Maison de beauté · Paris &amp; Tokyo</small>
+  </a>
+  <div class="nav-links" role="navigation">
+    <a class="nav-link" href="#le-soin">Le Soin</a>
+    <a class="nav-link" href="#le-corps">Le Corps</a>
+    <a class="nav-link" href="#le-mariage">Le Mariage</a>
+    <a class="nav-link" href="#la-maison">La Maison</a>
+    <a class="nav-link" href="#notes">Notes</a>
+  </div>
+  <a class="nav-cta" href="#reservation">Réservation</a>
+</nav>
+
+<!-- ========================= HERO ========================= -->
+<header class="hero" id="hero">
+  <div class="hero-grid">
+    <div class="hero-text reveal">
+      <span class="hero-eyebrow nowrap">Maison de beauté · 2026</span>
+      <h1>
+        <em>L'art de<br>se préparer.</em>
+        <span class="roman">自分を整える、<br>その芸術。</span>
+      </h1>
+      <p class="hero-jp">
+        薔薇水、蜜蝋、ベルベットのドレープ。<br>
+        フェイシャル、ボディ、そして結婚式までの数ヶ月を、<br>
+        ひとつの儀式として整えるパリのメゾン。<br>
+        完全予約制・面談式。
+      </p>
+    </div>
+    <figure class="hero-figure reveal">
+      <img
+        src="https://images.unsplash.com/photo-1518895949257-7621c3c786d7?auto=format&fit=crop&w=1200&q=80"
+        alt="深紅のベルベットドレープに包まれた一輪の薔薇のスティルライフ"
+        loading="eager" />
+      <figcaption>une rose, le velours, et le temps.</figcaption>
+    </figure>
+  </div>
+  <div class="hero-foot">
+    <dl>
+      <div>
+        <dt>Adresse</dt>
+        <dd class="jp">東京 銀座 七丁目</dd>
+      </div>
+      <div>
+        <dt>Sur rendez-vous</dt>
+        <dd class="jp">完全予約制</dd>
+      </div>
+      <div>
+        <dt>Depuis</dt>
+        <dd><span class="tabular">MMXXVI</span></dd>
+      </div>
+    </dl>
+    <span class="hero-mark"><span class="dot"></span>Sur invitation · Maison privée</span>
+  </div>
+</header>
+
+<!-- ========================= PHILOSOPHY ========================= -->
+<section class="philosophy" id="philosophy" aria-labelledby="philosophy-h">
+  <div class="container">
+    <div class="philosophy-grid">
+      <p class="philosophy-mark reveal" id="philosophy-h">
+        Le velours <br>
+        prend le temps <br>
+        de se poser.
+      </p>
+      <div class="philosophy-body reveal">
+        <p>
+          メゾン・ルージュは、フェイシャル、ボディ、そして結婚式までの花嫁準備を、ひとつの<em>儀式</em>として並べ直すために生まれた、パリ・東京のメゾン・ド・ボーテです。割引も、煽る言葉も、ビフォーアフターの並列も持ちません。
+        </p>
+        <p>
+          肌は紙のように扱えば紙のように疲れ、ベルベットのように扱えば<em>ベルベットのように深まり</em>ます。私たちが整えるのは数値ではなく、あなたが鏡の前で自分を見つめ直すときの、その一瞬の角度です。
+        </p>
+        <p>
+          結婚式は通過点であり、終着点ではありません。半年通って、結婚し、その後も季節ごとに帰ってくる。そのような長い関係を、メゾン・ルージュはあなたと結びます。
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= LE SOIN (Facial) ========================= -->
+<section class="soins" id="le-soin" aria-labelledby="le-soin-h">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <span class="eyebrow">I &nbsp;·&nbsp; Le Soin</span>
+        <h2 class="display-h" id="le-soin-h">
+          <em>Le Soin du visage.</em>
+          <span class="roman">顔の手入れ</span>
+        </h2>
+      </div>
+      <p class="lede">
+        薔薇水で清め、蜜蝋で柔らげ、ベルベットの布で整える。フェイシャルは肌の状態の数値化ではなく、季節と気分と肌の声に応答する時間です。
+      </p>
+    </div>
+    <div class="soins-list">
+      <article class="soin reveal">
+        <span class="soin-num">— Nº 01</span>
+        <h3>
+          Soin Velours
+          <small>ベルベット・フェイシャル</small>
+        </h3>
+        <p>
+          薔薇水とベルベットの布で、肌の表層に積もった季節の疲れを丁寧に解く、メゾンの基本となる手入れ。
+        </p>
+        <div class="soin-meta">
+          <span>90 minutes</span>
+          <span class="price">¥38,500</span>
+        </div>
+      </article>
+      <article class="soin reveal">
+        <span class="soin-num">— Nº 02</span>
+        <h3>
+          Soin Rose
+          <small>薔薇水トリートメント</small>
+        </h3>
+        <p>
+          自社蒸留の薔薇水と冷温の真鍮ローラーで、肌に深く息を吸わせる、季節の変わり目のための手入れ。
+        </p>
+        <div class="soin-meta">
+          <span>75 minutes</span>
+          <span class="price">¥34,100</span>
+        </div>
+      </article>
+      <article class="soin reveal">
+        <span class="soin-num">— Nº 03</span>
+        <h3>
+          Soin Champagne
+          <small>光輝の前夜ケア</small>
+        </h3>
+        <p>
+          大切な前夜のための、シャンパンに着想を得た光輝マスク。式・撮影・大切な約束の前日に静かに肌を整える。
+        </p>
+        <div class="soin-meta">
+          <span>60 minutes</span>
+          <span class="price">¥42,900</span>
+        </div>
+      </article>
+      <article class="soin reveal">
+        <span class="soin-num">— Nº 04</span>
+        <h3>
+          Soin Cire d'Abeille
+          <small>蜜蝋・温パックの儀</small>
+        </h3>
+        <p>
+          冬季のための温かな蜜蝋パック。乾きの底から肌の温度を回復させ、首筋までを柔らかに包む。
+        </p>
+        <div class="soin-meta">
+          <span>105 minutes</span>
+          <span class="price">¥45,100</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= LE CORPS (Body) — VELVET SECTION ========================= -->
+<section class="section--velvet" id="le-corps" aria-labelledby="le-corps-h">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <span class="eyebrow">II &nbsp;·&nbsp; Le Corps</span>
+        <h2 class="display-h" id="le-corps-h">
+          <em>Le Corps en velours.</em>
+          <span class="roman">身体の手入れ</span>
+        </h2>
+      </div>
+      <p class="lede">
+        身体は装うためにあるのではなく、自分が一日を過ごすための器です。ボディ・ケアは輪郭の引き締めではなく、姿勢と呼吸を取り戻すための、長い時間です。
+      </p>
+    </div>
+    <div class="corps-list">
+      <article class="corps reveal">
+        <div class="corps-num">— V</div>
+        <h3>
+          Bain de Roses
+          <small>薔薇浴と全身手入れ</small>
+        </h3>
+        <p>
+          薔薇水と精油の温浴に始まり、肩甲骨と腰の二点に時間をかけてほどく、二時間の儀。
+        </p>
+        <div class="corps-meta">120 min · ¥52,800</div>
+      </article>
+      <article class="corps reveal">
+        <div class="corps-num">— VI</div>
+        <h3>
+          Soin du Dos
+          <small>背中と首筋の手入れ</small>
+        </h3>
+        <p>
+          振り返ったときに自分が一番見られている場所。背中から首筋までを蜜蝋とベルベットの布で整える。
+        </p>
+        <div class="corps-meta">75 min · ¥36,300</div>
+      </article>
+      <article class="corps reveal">
+        <div class="corps-num">— VII</div>
+        <h3>
+          Décolleté Saison
+          <small>季節のデコルテケア</small>
+        </h3>
+        <p>
+          鎖骨から胸元の薄い皮膚は、顔よりも季節の影響を受けます。季節ごとに薔薇水とオイルを使い分ける。
+        </p>
+        <div class="corps-meta">60 min · ¥29,700</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= LE MARIAGE — TIMELINE ========================= -->
+<section class="mariage" id="le-mariage" aria-labelledby="le-mariage-h">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <span class="eyebrow">III &nbsp;·&nbsp; Le Mariage</span>
+        <h2 class="display-h" id="le-mariage-h">
+          <em>Le Mariage,<br>une saison à soi.</em>
+          <span class="roman">結婚式までの、自分の季節</span>
+        </h2>
+      </div>
+      <p class="lede">
+        結婚式に向けた時間は、減量や追い込みではなく、自分のピークを当日に合わせる長い設計です。十二ヶ月前から前日まで、押しつけのない四つの節目で、メゾンと共にゆっくり整えます。
+      </p>
+    </div>
+
+    <p class="mariage-intro reveal">
+      私たちは「ブライダル特別パック」「先着・限定」「キャンペーン価格」を持ちません。
+      花嫁準備は誰かと比較する競技ではなく、あなたがあなた自身に約束する季節です。
+      下記は標準的な道のりであり、すべては来店時のご相談から設計します。
+    </p>
+
+    <div class="timeline">
+      <div class="timeline-rail reveal" aria-hidden="true">
+        <span class="timeline-mark">— 12 mois</span>
+        <span class="timeline-mark">— 6 mois</span>
+        <span class="timeline-mark">— 3 mois</span>
+        <span class="timeline-mark">— La veille</span>
+      </div>
+      <ol class="timeline-list">
+
+        <li class="stage reveal">
+          <div class="stage-time">
+            12 mois
+            <small>一年前</small>
+          </div>
+          <div>
+            <h3>Commencement<span class="jp">はじまりの面談</span></h3>
+            <p>
+              九十分の面談から始まります。式の予定日、当日のお召し物の方向、過去の肌の波、ご家族の予定。数値ではなく、生活と願いを伺います。施術はまだ提案しません。
+            </p>
+            <ul>
+              <li>面談・カウンセリング 90分</li>
+              <li>季節と肌の波の記録開始</li>
+              <li>四半期ごとの来店設計</li>
+            </ul>
+            <p class="stage-quote">
+              「半年あれば充分だと言われましたが、メゾンでは一年前から伺います。それは肌のためではなく、あなたの季節を一周整えるためです。」
+            </p>
+          </div>
+        </li>
+
+        <li class="stage reveal">
+          <div class="stage-time">
+            6 mois
+            <small>半年前</small>
+          </div>
+          <div>
+            <h3>Soin de fond<span class="jp">土台づくり</span></h3>
+            <p>
+              フェイシャルとボディの定期化が始まる時期です。月一の Soin Velours、季節の変わり目の Soin Rose を中心に、肌の土台を静かに作ります。
+            </p>
+            <ul>
+              <li>月一のフェイシャル</li>
+              <li>季節ごとのボディ・ケア</li>
+              <li>家庭での朝夕の手当ての設計</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="stage reveal">
+          <div class="stage-time">
+            3 mois
+            <small>三ヶ月前</small>
+          </div>
+          <div>
+            <h3>Affinement<span class="jp">輪郭を整える</span></h3>
+            <p>
+              当日のドレスの肩・背中・デコルテに合わせ、最後の三ヶ月で整える領域を絞ります。減らすのではなく、姿勢と呼吸と肌の透明感を、当日にピークが来るように設計します。
+            </p>
+            <ul>
+              <li>背中・デコルテの集中ケア</li>
+              <li>顔の最終トーン調整</li>
+              <li>当日の所作・呼吸の確認</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="stage reveal">
+          <div class="stage-time">
+            La veille
+            <small>前日</small>
+          </div>
+          <div>
+            <h3>Soin Champagne<span class="jp">光輝の前夜</span></h3>
+            <p>
+              前日の夕方、九十分。シャンパンの細かな泡を思わせる光輝マスクで肌を静かに整え、温かな蜜蝋で首筋までを包みます。施術後は一切の予定を入れず、深い眠りに身をゆだねてください。
+            </p>
+            <ul>
+              <li>Soin Champagne 90分</li>
+              <li>翌朝のお仕度の相談</li>
+              <li>お送りの手配</li>
+            </ul>
+            <p class="stage-quote">
+              「明日の朝、鏡の前であなたが微笑むその一瞬のために、今日の夜があります。」
+            </p>
+          </div>
+        </li>
+
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= LA MAISON (Editorial) ========================= -->
+<section class="maison" id="la-maison" aria-labelledby="la-maison-h">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <span class="eyebrow">IV &nbsp;·&nbsp; La Maison</span>
+        <h2 class="display-h" id="la-maison-h">
+          <em>La Maison,<br>matière par matière.</em>
+          <span class="roman">素材から語るメゾン</span>
+        </h2>
+      </div>
+      <p class="lede">
+        薔薇水、蜜蝋、ベルベットの布、真鍮の道具、シャンパングラス。メゾンの調度は装飾ではなく、施術の意味を支える素材として選ばれています。
+      </p>
+    </div>
+
+    <div class="maison-grid">
+      <figure class="maison-figure reveal">
+        <img
+          src="https://images.unsplash.com/photo-1602910344008-22f323cc1817?auto=format&fit=crop&w=1200&q=80"
+          alt="深紅のベルベット生地のひだと蜜蝋ろうそくのある室内のスティルライフ"
+          loading="lazy" />
+        <figcaption>l'atelier — velours, cire, et lumière basse.</figcaption>
+      </figure>
+      <div class="maison-text reveal">
+        <p class="maison-lede">
+          <em>― 「メゾン・ルージュは、四つの素材の上に成り立つ家です。」</em>
+        </p>
+        <div class="maison-body">
+          <p>
+            施術室には朝の自然光が斜めに入り、夜は蜜蝋ろうそくが灯ります。電気的な強い光を一切持たないのは、肌に当てる前にまず私たち自身が、自然光の階調を見失わないためです。
+          </p>
+          <p>
+            ベルベットのドレープは飾りではなく、施術の終わりにお身体を包む布として使われます。重みのある布で覆われたときの安心は、薔薇水や蜜蝋と同じくらい、メゾンの仕事の一部です。
+          </p>
+        </div>
+        <dl class="materials">
+          <div class="material"><em>L'eau de rose</em>自社蒸留の薔薇水・季節ごとに香りを変える</div>
+          <div class="material"><em>La cire d'abeille</em>蜜蝋・温パックと唇の手入れに用いる</div>
+          <div class="material"><em>Le velours</em>ベルベット・施術後の身体を包む布</div>
+          <div class="material"><em>Le laiton</em>真鍮・冷温のローラーと小皿</div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= NOTES ========================= -->
+<section class="notes" id="notes" aria-labelledby="notes-h">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <span class="eyebrow">V &nbsp;·&nbsp; Notes</span>
+        <h2 class="display-h" id="notes-h">
+          <em>Quelques notes,<br>avant de venir.</em>
+          <span class="roman">メゾンへお越しになる前に</span>
+        </h2>
+      </div>
+      <p class="lede">
+        メゾンには小さな作法があります。いずれも特別なものではなく、あなたの時間を守るためのものです。
+      </p>
+    </div>
+
+    <dl class="notes-grid">
+      <div class="note reveal">
+        <dt>I — Horaires<small>営業時間</small></dt>
+        <dd>
+          火曜から土曜、<span class="tabular nowrap">10:00 — 20:00</span>。日曜・月曜は休館。
+          祝日は不定休のため、ご予約時にご確認ください。
+        </dd>
+      </div>
+      <div class="note reveal">
+        <dt>II — Réservation<small>ご予約</small></dt>
+        <dd>
+          完全予約制。初回は九十分の面談を含むため、お時間に余裕を持ってお越しください。当日のキャンセルは、施術費の半額を頂戴いたします。
+        </dd>
+      </div>
+      <div class="note reveal">
+        <dt>III — Tenue<small>お召し物</small></dt>
+        <dd>
+          施術衣をご用意しております。香水はお控えいただき、首筋とデコルテに何もつけずにお越しください。
+        </dd>
+      </div>
+      <div class="note reveal">
+        <dt>IV — Silence<small>静寂</small></dt>
+        <dd>
+          メゾン内は静寂を保つため、音楽は最小に、会話は控えめにお願いしております。施術中の沈黙は、私たちからの礼節です。
+        </dd>
+      </div>
+      <div class="note reveal">
+        <dt>V — Photos<small>撮影について</small></dt>
+        <dd>
+          メゾン内の撮影はご遠慮ください。写真ではなく、肌と布の感触の記憶を持ち帰っていただきたいためです。
+        </dd>
+      </div>
+      <div class="note reveal">
+        <dt>VI — Accompagnement<small>お付き添い</small></dt>
+        <dd>
+          施術中のお付き添いは原則お断りしておりますが、面談のみ同席は可能です。事前にお申し付けください。
+        </dd>
+      </div>
+    </dl>
+  </div>
+</section>
+
+<!-- ========================= RÉSERVATION ========================= -->
+<section class="section--velvet reservation" id="reservation" aria-labelledby="reservation-h">
+  <div class="container">
+    <div class="reservation-inner">
+      <div class="reservation-text reveal">
+        <span class="eyebrow">VI &nbsp;·&nbsp; Réservation</span>
+        <h2 class="display-h" id="reservation-h">
+          <em>Réservation,<br>sur rendez-vous.</em>
+          <span class="roman">ご予約は面談から</span>
+        </h2>
+        <p>
+          完全予約制・面談式のメゾンです。はじめてのお客様は、九十分の面談からお迎えいたします。料金や来訪のご相談は、メゾンの番号またはお手紙でお気軽にお問い合わせください。
+        </p>
+        <p class="signature">
+          ― あなたの季節を、メゾンと共に。<br>
+          &nbsp;&nbsp;&nbsp;Maison Rouge.
+        </p>
+      </div>
+
+      <div class="reservation-card reveal" role="complementary" aria-label="メゾン情報">
+        <h3>Maison Rouge — Ginza</h3>
+        <dl>
+          <dt>Adresse</dt>
+          <dd>東京都中央区銀座七丁目<br>×−×−× メゾン・ルージュ</dd>
+          <dt>Téléphone</dt>
+          <dd><a href="tel:+81000000000" class="tabular">+81 (0)3 0000 0000</a></dd>
+          <dt>Lettre</dt>
+          <dd><a href="mailto:bonjour@maison-rouge.example">bonjour@maison-rouge.example</a></dd>
+          <dt>Horaires</dt>
+          <dd class="tabular">Mar — Sam &nbsp; 10:00 — 20:00</dd>
+          <dt>Accès</dt>
+          <dd>銀座駅 A2 出口より徒歩 7 分<br>新橋駅 銀座口より徒歩 9 分</dd>
+        </dl>
+        <a class="reservation-cta nowrap" href="mailto:bonjour@maison-rouge.example">
+          <span>Demander un rendez-vous</span>
+          <small>ご予約のご相談</small>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= FOOTER ========================= -->
+<footer aria-label="フッター">
+  <div class="footer-inner">
+    <div class="footer-block">
+      <div class="footer-brand">Maison Rouge</div>
+      <p class="footer-tag nowrap">L'art de se préparer.</p>
+      <p style="margin-top:1.2rem;">
+        パリと東京のあいだに育つ、架空のメゾン・ド・ボーテ。<br>
+        フェイシャル、ボディ、結婚式までの数ヶ月を、ひとつの儀式として整えます。
+      </p>
+    </div>
+    <div class="footer-block">
+      <h4>La Maison</h4>
+      <p>
+        東京都中央区銀座七丁目<br>
+        ×−×−× Maison Rouge<br>
+        <span class="tabular">+81 (0)3 0000 0000</span>
+      </p>
+    </div>
+    <div class="footer-block">
+      <h4>Sommaire</h4>
+      <p>
+        <a href="#le-soin">Le Soin du visage</a><br>
+        <a href="#le-corps">Le Corps en velours</a><br>
+        <a href="#le-mariage">Le Mariage</a><br>
+        <a href="#la-maison">La Maison</a><br>
+        <a href="#notes">Notes</a><br>
+        <a href="#reservation">Réservation</a>
+      </p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; <span class="tabular">2026</span> Maison Rouge · A fictional maison for design study.</span>
+    <span class="right nowrap">L'art de se préparer.</span>
+  </div>
+</footer>
+
+<script>
+  // Nav scroll state
+  (function() {
+    const nav = document.getElementById('top-nav');
+    if (!nav) return;
+    const onScroll = () => {
+      if (window.scrollY > 24) nav.classList.add('is-scrolled');
+      else nav.classList.remove('is-scrolled');
+    };
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+  })();
+
+  // Reveal on scroll (respect prefers-reduced-motion)
+  (function() {
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const items = document.querySelectorAll('.reveal');
+    if (reduce || !('IntersectionObserver' in window)) {
+      items.forEach(el => el.classList.add('is-in'));
+      return;
+    }
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('is-in');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+    items.forEach(el => io.observe(el));
+  })();
+</script>
+
+</body>
+</html>
